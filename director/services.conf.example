@@ -1,0 +1,70 @@
+/*
+ * Optional service apply rules.
+ *
+ * Director users can also create these services in the GUI and assign the
+ * matching check template. The API key and protected secret should
+ * normally be assigned to the OPNsense host template.
+ */
+
+apply Service "OPNsense CPU" {
+  import "OPNsense CPU Template"
+  vars.opnsense_warning = 80
+  vars.opnsense_critical = 90
+  assign where host.vars.opnsense_api_key
+}
+
+apply Service "OPNsense Memory" {
+  import "OPNsense Memory Template"
+  vars.opnsense_warning = 80
+  vars.opnsense_critical = 90
+  assign where host.vars.opnsense_api_key
+}
+
+apply Service "OPNsense Disk" {
+  import "OPNsense Disk Template"
+  vars.opnsense_warning = 80
+  vars.opnsense_critical = 90
+  assign where host.vars.opnsense_api_key
+}
+
+apply Service "OPNsense Services" {
+  import "OPNsense Services Template"
+  vars.opnsense_services = [ "configd", "unbound" ]
+  assign where host.vars.opnsense_api_key
+}
+
+apply Service "OPNsense Updates" {
+  import "OPNsense Updates Template"
+  vars.opnsense_warning_updates = 1
+  vars.opnsense_critical_updates = 20
+  assign where host.vars.opnsense_api_key
+}
+
+apply Service "OPNsense Certificates" {
+  import "OPNsense Certificates Template"
+  vars.opnsense_warning_days = 30
+  vars.opnsense_critical_days = 14
+  assign where host.vars.opnsense_api_key
+}
+
+apply Service "OPNsense Interfaces" {
+  import "OPNsense Interfaces Template"
+  vars.opnsense_interfaces = [ "wan", "lan" ]
+  vars.opnsense_warning_errors = 1
+  vars.opnsense_critical_errors = 10
+  assign where host.vars.opnsense_api_key
+}
+
+apply Service "OPNsense WireGuard" {
+  import "OPNsense WireGuard Template"
+  vars.opnsense_warning_age = 600
+  vars.opnsense_critical_age = 1800
+  assign where host.vars.opnsense_api_key
+}
+
+apply Service "OPNsense Firewall" {
+  import "OPNsense Firewall Template"
+  vars.opnsense_warning = 80
+  vars.opnsense_critical = 90
+  assign where host.vars.opnsense_api_key
+}

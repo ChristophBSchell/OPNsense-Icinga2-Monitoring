@@ -1,0 +1,338 @@
+{
+  "Director Config": {
+    "version": "1.11.0",
+    "objects": {
+      "DatafieldCategory": {
+        "OPNsense": {
+          "category_name": "OPNsense"
+        }
+      },
+      "Datafield": {
+        "opnsense_host": {
+          "varname": "opnsense_host",
+          "caption": "OPNsense API Host",
+          "description": "DNS name or IP address used to reach the OPNsense API",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeString",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_api_key": {
+          "varname": "opnsense_api_key",
+          "caption": "OPNsense API Key",
+          "description": "API key of the dedicated OPNsense monitoring user",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeString",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_api_secret": {
+          "varname": "opnsense_api_secret",
+          "caption": "OPNsense API Secret",
+          "description": "Protected API secret; passed directly to the check command",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeString",
+          "format": null,
+          "settings": {
+            "visibility": "secret"
+          },
+          "category": "OPNsense"
+        },
+        "opnsense_port": {
+          "varname": "opnsense_port",
+          "caption": "OPNsense API Port",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeNumber",
+          "format": null,
+          "settings": {
+            "min": 1,
+            "max": 65535
+          },
+          "category": "OPNsense"
+        },
+        "opnsense_mode": {
+          "varname": "opnsense_mode",
+          "caption": "OPNsense Check Mode",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeString",
+          "format": null,
+          "settings": {
+            "visibility": "visible"
+          },
+          "category": "OPNsense"
+        },
+        "opnsense_warning": {
+          "varname": "opnsense_warning",
+          "caption": "OPNsense Warning Threshold",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeNumber",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_critical": {
+          "varname": "opnsense_critical",
+          "caption": "OPNsense Critical Threshold",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeNumber",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_timeout": {
+          "varname": "opnsense_timeout",
+          "caption": "OPNsense API Timeout",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeNumber",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_insecure": {
+          "varname": "opnsense_insecure",
+          "caption": "OPNsense Disable TLS Verification",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeBoolean",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_ca_file": {
+          "varname": "opnsense_ca_file",
+          "caption": "OPNsense CA File",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeString",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_services": {
+          "varname": "opnsense_services",
+          "caption": "OPNsense Services",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeArray",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_interfaces": {
+          "varname": "opnsense_interfaces",
+          "caption": "OPNsense Interfaces",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeArray",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_filesystems": {
+          "varname": "opnsense_filesystems",
+          "caption": "OPNsense Filesystems",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeArray",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_certificates": {
+          "varname": "opnsense_certificates",
+          "caption": "OPNsense Certificates",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeArray",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_wireguard_instances": {
+          "varname": "opnsense_wireguard_instances",
+          "caption": "OPNsense WireGuard Instances",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeArray",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_wireguard_peers": {
+          "varname": "opnsense_wireguard_peers",
+          "caption": "OPNsense WireGuard Peers",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeArray",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_warning_age": {
+          "varname": "opnsense_warning_age",
+          "caption": "OPNsense Warning Handshake Age",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeNumber",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_critical_age": {
+          "varname": "opnsense_critical_age",
+          "caption": "OPNsense Critical Handshake Age",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeNumber",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_warning_days": {
+          "varname": "opnsense_warning_days",
+          "caption": "OPNsense Certificate Warning Days",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeNumber",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_critical_days": {
+          "varname": "opnsense_critical_days",
+          "caption": "OPNsense Certificate Critical Days",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeNumber",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_warning_errors": {
+          "varname": "opnsense_warning_errors",
+          "caption": "OPNsense Interface Warning Errors",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeNumber",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_critical_errors": {
+          "varname": "opnsense_critical_errors",
+          "caption": "OPNsense Interface Critical Errors",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeNumber",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_warning_updates": {
+          "varname": "opnsense_warning_updates",
+          "caption": "OPNsense Warning Updates",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeNumber",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_critical_updates": {
+          "varname": "opnsense_critical_updates",
+          "caption": "OPNsense Critical Updates",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeNumber",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_security_critical": {
+          "varname": "opnsense_security_critical",
+          "caption": "OPNsense Security Updates Critical",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeBoolean",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_warning_drops": {
+          "varname": "opnsense_warning_drops",
+          "caption": "OPNsense Firewall Warning Drops",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeNumber",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_critical_drops": {
+          "varname": "opnsense_critical_drops",
+          "caption": "OPNsense Firewall Critical Drops",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeNumber",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        },
+        "opnsense_tls_certificate_only": {
+          "varname": "opnsense_tls_certificate_only",
+          "caption": "OPNsense TLS Certificate Only",
+          "datatype": "Icinga\\Module\\Director\\DataType\\DataTypeBoolean",
+          "format": null,
+          "settings": {},
+          "category": "OPNsense"
+        }
+      },
+      "CheckCommand": {
+        "check_opnsense": {
+          "object_name": "check_opnsense",
+          "object_type": "object",
+          "methods_execute": "PluginCheckCommand",
+          "command": "PluginDir + \"/check_opnsense.py\"",
+          "timeout": "60s",
+          "arguments": {
+            "--host": "$opnsense_host$",
+            "--port": "$opnsense_port$",
+            "--api-key": "$opnsense_api_key$",
+            "--api-secret": "$opnsense_api_secret$",
+            "--mode": "$opnsense_mode$",
+            "--warning": "$opnsense_warning$",
+            "--critical": "$opnsense_critical$",
+            "--timeout": "$opnsense_timeout$",
+            "--insecure": {
+              "set_if": "$opnsense_insecure$"
+            },
+            "--ca-file": "$opnsense_ca_file$",
+            "--service": {
+              "value": "$opnsense_services$",
+              "repeat_key": true
+            },
+            "--interface": {
+              "value": "$opnsense_interfaces$",
+              "repeat_key": true
+            },
+            "--filesystem": {
+              "value": "$opnsense_filesystems$",
+              "repeat_key": true
+            },
+            "--certificate": {
+              "value": "$opnsense_certificates$",
+              "repeat_key": true
+            },
+            "--wireguard-instance": {
+              "value": "$opnsense_wireguard_instances$",
+              "repeat_key": true
+            },
+            "--wireguard-peer": {
+              "value": "$opnsense_wireguard_peers$",
+              "repeat_key": true
+            },
+            "--warning-age": "$opnsense_warning_age$",
+            "--critical-age": "$opnsense_critical_age$",
+            "--warning-days": "$opnsense_warning_days$",
+            "--critical-days": "$opnsense_critical_days$",
+            "--warning-errors": "$opnsense_warning_errors$",
+            "--critical-errors": "$opnsense_critical_errors$",
+            "--warning-updates": "$opnsense_warning_updates$",
+            "--critical-updates": "$opnsense_critical_updates$",
+            "--security-critical": {
+              "set_if": "$opnsense_security_critical$"
+            },
+            "--warning-drops": "$opnsense_warning_drops$",
+            "--critical-drops": "$opnsense_critical_drops$",
+            "--tls-certificate-only": {
+              "set_if": "$opnsense_tls_certificate_only$"
+            }
+          }
+        }
+      },
+      "ServiceTemplate": {
+        "OPNsense Service Master": {
+          "object_name": "OPNsense Service Master",
+          "object_type": "template",
+          "check_command": "check_opnsense",
+          "check_interval": "5m",
+          "retry_interval": "1m",
+          "max_check_attempts": 3,
+          "enable_active_checks": true,
+          "vars": {
+            "opnsense_port": 443,
+            "opnsense_timeout": 15,
+            "opnsense_warning": 80,
+            "opnsense_critical": 90,
+            "opnsense_warning_age": 600,
+            "opnsense_critical_age": 1800,
+            "opnsense_warning_days": 30,
+            "opnsense_critical_days": 14,
+            "opnsense_warning_errors": 1,
+            "opnsense_critical_errors": 10,
+            "opnsense_warning_updates": 1,
+            "opnsense_critical_updates": 20,
+            "opnsense_warning_drops": -1,
+            "opnsense_critical_drops": -1
+          }
+        }
+      }
+    }
+  }
+}

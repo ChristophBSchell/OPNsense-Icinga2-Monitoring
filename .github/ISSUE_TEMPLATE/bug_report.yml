@@ -1,0 +1,50 @@
+name: Bug report
+description: Report an error in a check or Director import
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Plugin version
+      placeholder: "0.1"
+    validations:
+      required: true
+  - type: input
+    id: opnsense
+    attributes:
+      label: OPNsense version
+    validations:
+      required: true
+  - type: input
+    id: icinga
+    attributes:
+      label: Icinga and Director versions
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Check mode
+      options:
+        - cpu
+        - memory
+        - disk
+        - services
+        - updates
+        - certificates
+        - interfaces
+        - wireguard
+        - firewall
+        - Director basket/import
+  - type: textarea
+    id: description
+    attributes:
+      label: Description and sanitized output
+      description: Remove API keys, secrets, hostnames and public IP addresses.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
